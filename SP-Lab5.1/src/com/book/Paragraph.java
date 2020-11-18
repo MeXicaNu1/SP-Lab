@@ -1,7 +1,11 @@
-package com.book;
+package com.models;
+
+import com.services.AlignStrategy;
+import com.services.Context;
 
 public class Paragraph implements Element {
     private String text;
+    private AlignStrategy strategy;
 
     public Paragraph(String name){
         this.text = name;
@@ -15,8 +19,16 @@ public class Paragraph implements Element {
         this.text = text;
     }
 
+    public void setAlignStrategy(AlignStrategy strategy){
+        this.strategy = strategy;
+    }
+
     @Override
     public void print(){
+        if(strategy != null){
+            strategy.render(text, new Context());
+            return;
+        }
         System.out.println("Paragraph text: " + text);
     }
 }

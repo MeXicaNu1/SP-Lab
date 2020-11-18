@@ -1,8 +1,8 @@
-import com.book.*;
-import com.strategy.AlignCenter;
-import com.strategy.AlignLeft;
-import com.strategy.AlignRight;
-import com.utils.Dimension;
+import com.models.*;
+import com.services.AlignCenter;
+import com.services.AlignLeft;
+import com.services.AlignRight;
+import com.resources.Dimension;
 
 public class BookMain {
     public static void main(String[] args) throws Exception {
